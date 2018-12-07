@@ -3,6 +3,9 @@ using std::cout;
 using std::endl;
 using std::cin;
 
+#include <sstream>
+using std::stringstream;
+
 #include <vector>
 using std::vector;
 
@@ -11,6 +14,9 @@ using std::ofstream;
 using std::ifstream;
 
 #include "Civilizacion.h"
+#include "Civ_17ARZ.h"
+#include "Civ_BB01.h"
+#include "Civ_CC10.h"
 
 int main(){
   int salida=0;
@@ -40,16 +46,25 @@ int main(){
           cout<<"El archivo no existe.."<<endl;
         }else{
           string buffer;
+          string nombre_l;
+          string planeta_l;
+          string lider_l;
+          int edad_l;
           cout<<"El contenido del archivo es: "<<endl;
           while(!inputFile.eof()){
             getline(inputFile, buffer);
-            cout<<buffer<<endl;
+            int counter=0;
+            int counter_words=0;
+            for (int i = 0; i < buffer.size(); i++){
+                  
             }
-            inputFile.close();
+            cout<<buffer<<endl;
           }
+          inputFile.close();
+        }
 
       }
-      
+
       if (op==2) {
         /* code */
       }
