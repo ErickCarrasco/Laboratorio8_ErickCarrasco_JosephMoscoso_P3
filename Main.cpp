@@ -199,7 +199,8 @@ int main(){
         //CODIFICAR DESDE EL PROGRAMA
         cout<<"Ingrese el codigo a codificar: "<<endl;
         string codificador_programa;
-        cin>>codificador_programa;
+        //cin>>codificador_programa;
+        getline(cin, codificador_programa);
         cout<<endl;
         cout<<"--------------------------------------"<<endl;
         cout<<endl;
@@ -237,7 +238,8 @@ int main(){
         //DECODIFICAR DESDE EL PROGRAMA
         cout<<"Ingrese el codigo a decodificar: "<<endl;
         string decodificador_programa;
-        cin>>decodificador_programa;
+        //cin>>decodificador_programa;
+        getline(cin, decodificador_programa);
         cout<<endl;
         cout<<"--------------------------------------"<<endl;
         cout<<endl;
