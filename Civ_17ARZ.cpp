@@ -9,7 +9,7 @@ string Civ_17ARZ::Codificar(string x){
   string nuevo;
   //string temporal=x;
   for (int i = 0; i < x.size(); i++) {
-      nuevo=nuevo+temporal[x.size()-1];
+      nuevo=nuevo+x[x.size()-1];
   }
   return nuevo;
 }
