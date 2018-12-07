@@ -6,11 +6,19 @@ Civ_17ARZ::Civ_17ARZ(string nombre, string planeta, string lider, int edad):Civi
 }
 
 string Civ_17ARZ::Codificar(string x){
-  return x;
+  string nuevo;
+  for (int i = 0; i < x.size(); i++) {
+      nuevo=nuevo+x[size-1];
+  }
+  return nuevo;
 }
 
 string Civ_17ARZ::Decodificar(string x){
-  return x;
+  string nuevo;
+  for (int i = 0; i < x.size(); i++) {
+      nuevo=nuevo+x[size-1];
+  }
+  return nuevo;
 }
 
 Civ_17ARZ::~Civ_17ARZ(){
