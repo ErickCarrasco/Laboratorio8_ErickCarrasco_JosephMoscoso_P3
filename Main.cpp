@@ -3,10 +3,18 @@ using std::cout;
 using std::endl;
 using std::cin;
 
+#include <vector>
+using std::vector;
+
+#include <fstream>
+using std::ofstream;
+using std::ifstream;
+
 #include "Civilizacion.h"
 
 int main(){
   int salida=0;
+  vector <Civilizacion*> lista_civilizacion;
   while (salida==0) {
       cout<<"Bienvenido"<<endl;
       cout<<"----------------------------------------"<<endl;
@@ -23,7 +31,25 @@ int main(){
       }
       if (op==1) {
         /* code */
+        string fileName;
+        cout<<"Ingrese el nombre del archivo: "<<endl;
+        cin>>fileName;
+        ifstream inputFile;
+        inputFile.open(fileName.c_str());
+        if(!inputFile.is_open()){
+          cout<<"El archivo no existe.."<<endl;
+        }else{
+          string buffer;
+          cout<<"El contenido del archivo es: "<<endl;
+          while(!inputFile.eof()){
+            getline(inputFile, buffer);
+            cout<<buffer<<endl;
+            }
+            inputFile.close();
+          }
+
       }
+      
       if (op==2) {
         /* code */
       }
