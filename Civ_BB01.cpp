@@ -5,7 +5,7 @@ Civ_BB01::Civ_BB01(string nombre, string planeta, string lider, int edad):Civili
 }
 
 string Civ_BB01::Codificar(string x){
-
+  
   return "";
 }
 

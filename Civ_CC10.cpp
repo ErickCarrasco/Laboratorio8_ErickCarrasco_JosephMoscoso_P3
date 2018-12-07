@@ -9,7 +9,7 @@ string Civ_CC10::Codificar(string x){
   string fin;
   string cosas="";
   for (int i = 0; i < 17; i++) {
-
+    
   }
   return "";
 }
