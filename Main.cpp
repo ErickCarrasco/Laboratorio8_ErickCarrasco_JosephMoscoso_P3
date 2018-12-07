@@ -50,14 +50,44 @@ int main(){
           string planeta_l;
           string lider_l;
           int edad_l;
+          string tipocod_l;
           cout<<"El contenido del archivo es: "<<endl;
           while(!inputFile.eof()){
             getline(inputFile, buffer);
             int counter=0;
-            int counter_words=0;
+            stringstream nombre_ss;
+            stringstream planeta_ss;
+            stringstream lider_ss;
+            stringstream edad_ss;
+            stringstream tipocod_ss;
             for (int i = 0; i < buffer.size(); i++){
-                  
+                if (buffer[i]=='|'){
+                    counter++;
+                }
+                if (buffer[i]!='|' && counter==0){
+                    nombre_ss>>buffer[i];
+                }
+                if (buffer[i]!='|' && counter==1){
+                    planeta_ss>>buffer[i];
+                }
+                if (buffer[i]!='|' && counter==2){
+                    lider_ss>>buffer[i];
+                }
+                if (buffer[i]!='|' && counter==3){
+                    edad_ss>>buffer[i];
+                }
+
+                if (buffer[i]!='|' && counter==4){
+                    tipocod_ss>>buffer[i];
+                }     
             }
+            nombre_l=nombre_ss.str();
+            planeta_l=planeta_ss.str();
+            lider_l=lider_ss.str();
+            string edad_s=edad_ss.str();
+            tipocod_l=tipocod_ss.str();
+            edad_l=std::stoi(edad_s);
+
             cout<<buffer<<endl;
           }
           inputFile.close();
