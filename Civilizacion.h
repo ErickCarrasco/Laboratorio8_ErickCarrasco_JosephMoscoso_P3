@@ -24,8 +24,9 @@ class Civilizacion{
 		void setEdad(int);
 		virtual string Codificar(string)=0;
 		virtual string Decodificar(string)=0;
-		virtual ~Civilizacion();
-	
+		//virtual ~Civilizacion();
+		~Civilizacion();
+
 };
 
 #endif
