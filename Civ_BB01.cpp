@@ -40,7 +40,7 @@ string Civ_BB01::Decodificar(string x){
     int j=0;
     while (num>0) {
       b=num%2;
-      final+=std::to_string(bin);
+      final+=std::to_string(b);
       num/=2;
     }
     final+='-';
