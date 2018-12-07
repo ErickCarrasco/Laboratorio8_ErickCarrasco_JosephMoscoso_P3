@@ -8,7 +8,7 @@ string Civ_BB01::Codificar(string x){
   x+='-';
   string final;
   string temp;
-  for (int i = 0; i < s.size(); i++) {
+  for (int i = 0; i < x.size(); i++) {
     if (x.at(i)!='-') {
       temp+=x.at(i);
     }else if(x.at(i)=='-'){
