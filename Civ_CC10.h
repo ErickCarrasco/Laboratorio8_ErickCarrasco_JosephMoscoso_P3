@@ -8,7 +8,7 @@ using std::string;
 
 class Civ_CC10 : public Civilizacion{
   public:
-    Civ_CC10();
+    Civ_CC10(string, string, string, int);
     virtual string Codificar(string);
     virtual string Decodificar(string);
     ~Civ_CC10();

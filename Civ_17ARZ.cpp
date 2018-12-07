@@ -1,6 +1,6 @@
 #include "Civ_17ARZ.h"
 
-Civ_17ARZ::Civ_17ARZ(){
+Civ_17ARZ::Civ_17ARZ(string nombre, string planeta, string lider, int edad):Civilizacion(nombre, planeta, lider, edad){
 
 }
 
