@@ -36,7 +36,9 @@ int main(){
           cout<<"----------------------------------------"<<endl;
       }
       if (op==1) {
-        /* code */
+        
+        //ACTUALIZACION DE LAS CIVILIZACIONES
+        
         if (lista_civilizacion.empty()){
             
             string fileName;
@@ -319,26 +321,6 @@ int main(){
 
       }//Fin if 4
 
-      /*
-      if (op==5) {
-        //DECODIFICAR DESDE EL ARCHIVO
-        string fileName;
-        cout<<"Ingrese el nombre del archivo: "<<endl;
-        cin>>fileName;
-        ifstream inputFile;
-        inputFile.open(fileName.c_str());
-        if(!inputFile.is_open()){
-          cout<<"El archivo no existe.."<<endl;
-        }else{
-            string DATA_ANALYSIS;
-            while(!inputFile.eof()){
-                getline(inputFile, DATA_ANALYSIS);
-
-            }
-
-        }
-      }//Fin if 5
-        */
 
       if (op==5) {
         //LEER HISTORIAL
