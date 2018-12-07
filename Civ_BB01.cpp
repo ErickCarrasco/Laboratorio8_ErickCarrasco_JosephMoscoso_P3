@@ -9,7 +9,7 @@ string Civ_BB01::Codificar(string x){
   return "";
 }
 
-string Civ_BB01::decodificar(string x){
+string Civ_BB01::Decodificar(string x){
   return "";
 }
 

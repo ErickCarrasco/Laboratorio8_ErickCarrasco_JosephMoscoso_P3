@@ -7,13 +7,13 @@ Civ_CC10::Civ_CC10(){
 string Civ_CC10::Codificar(string x){
   int con=16;
   string fin;
-  for (size_t i = 0; i < count; i++) {
-    
+  for (int i = 0; i < 17; i++) {
+
   }
   return "";
 }
 
-string Civ_CC10::decodificar(string x){
+string Civ_CC10::Decodificar(string x){
   return "";
 }
 
