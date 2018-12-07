@@ -4,11 +4,11 @@ Civ_17ARZ::Civ_17ARZ(){
 
 }
 
-string Civ_17ARZ::Codificar(string){
+string Civ_17ARZ::Codificar(string x){
   return "";
 }
 
-string Civ_17ARZ::decodificar(string){
+string Civ_17ARZ::decodificar(string x){
   return "";
 }
 
