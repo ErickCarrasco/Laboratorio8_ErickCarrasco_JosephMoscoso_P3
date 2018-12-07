@@ -37,6 +37,16 @@ int main(){
       }
       if (op==1) {
         /* code */
+        if (lista_civilizacion.empty())
+        {
+            /* code */
+        }else{
+            for (int i = 0; i < lista_civilizacion.size(); ++i)
+            {
+                delete lista_civilizacion[i];
+            }
+            lista_civilizacion.clear();
+        }
         string fileName;
         cout<<"Ingrese el nombre del archivo: "<<endl;
         cin>>fileName;
@@ -88,7 +98,23 @@ int main(){
             tipocod_l=tipocod_ss.str();
             edad_l=std::stoi(edad_s);
 
-            cout<<buffer<<endl;
+            if (tipocod_l=="Civ_CC10"){
+                Civilizacion* civ_cc10_l = new Civ_CC10(nombre_l, planeta_l, lider_l, edad_l);
+                lista_civilizacion.push_back(civ_cc10_l);
+            }
+
+            if (tipocod_l=="Civ_BB01"){
+                Civilizacion* civ_bb01_l = new Civ_BB01(nombre_l, planeta_l, lider_l, edad_l);
+                lista_civilizacion.push_back(civ_bb01_l);
+            }
+            if (tipocod_l=="Civ_17ARZ"){
+                Civilizacion* civ_17Arz_l = new Civ_17ARZ(nombre_l, planeta_l, lider_l, edad_l);
+                lista_civilizacion.push_back(civ_17Arz_l);
+            }
+
+            //lista_civilizacion.push_back(new Civilizacion(nombre_l, planeta_l, lider_l, edad_l));
+
+            //cout<<buffer<<endl;
           }
           inputFile.close();
         }
@@ -96,19 +122,73 @@ int main(){
       }
 
       if (op==2) {
-        /* code */
+        //CODIFICAR DESDE EL PROGRAMA
+        cout<<"Ingrese el codigo a codificar: "<<endl;
+        string codificador_programa;
+        cin>>codificador_programa;
+        cout<<endl;
+        cout<<"--------------------------------------"<<endl;
+        cout<<endl;
+        cout<<"--------------------------------------"<<endl;
+        for (int i = 0; i < lista_civilizacion.size(); ++i){
+            cout<<"["<<i<<"]"<<" "<< lista_civilizacion.at(i)->getNombre()<<" "<<endl;
+        }
+
+        int seleccion;
+        cout<<"Ingrese un numero a escoger: "<<endl;
+        cin>>seleccion;
+        if (seleccion<0 || seleccion>lista_civilizacion.size()-1){
+            cout<<"Error. Ingrese el valor nuevamente.."<<endl;
+            cin>>seleccion;
+        }
+        string DATA_ACQUIRED;
+        DATA_ACQUIRED = lista_civilizacion[seleccion]->Codificar(codificador_programa);
+
+        ofstream outPutFile;
+        outPutFile.open("HistorialMensajes.txt", std::ios::app);
+        outPutFile<<lista_civilizacion[seleccion]->getNombre()<<" , "<<" CODIFICACION DESDE EL PROGRAMA";
+        outPutFile<<"\nEntrada:";
+        outPutFile<<"\n"<<codificador_programa;
+        outPutFile<<"\nSalida: ";
+        outPutFile<<"\n"<<DATA_ACQUIRED;
+        outPutFile<<"\n-----------------------------------------";
+        outPutFile<<"\n";
+        outPutFile.close();
+
+        
+
       }
       if (op==3) {
-        /* code */
+        //DECODIFICAR DESDE EL PROGRAMA
+        cout<<"Ingrese el codigo a decodificar: "<<endl;
+        string decodificador_programa;
+        cin>>codificador_programa;
+        cout<<endl;
+        cout<<"--------------------------------------"<<endl;
+        cout<<endl;
+        cout<<"--------------------------------------"<<endl;
+        for (int i = 0; i < lista_civilizacion.size(); ++i){
+            cout<<"["<<i<<"]"<<" "<< lista_civilizacion.at(i)->getNombre()<<" "<<endl;
+        }
+
+        int seleccion;
+        cout<<"Ingrese un numero a escoger: "<<endl;
+        cin>>seleccion;
+        if (seleccion<0 || seleccion>lista_civilizacion.size()-1){
+            cout<<"Error. Ingrese el valor nuevamente.."<<endl;
+            cin>>seleccion;
+        }
+
+
       }
       if (op==4) {
-        /* code */
+        //CODIFICAR DESDE EL ARCHIVO
       }
       if (op==5) {
-        /* code */
+        //DECODIFICAR DESDE EL ARCHIVO
       }
       if (op==6) {
-        /* code */
+        //LEER HISTORIAL
       }
       if (op==7) {
         salida=1;
